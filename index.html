@@ -1,45 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ananya Patel — CS @ IIT Gandhinagar</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Ananya Patel — CSE @ IIT Gandhinagar</title>
+  <meta name="description" content="Portfolio of Ananya Patel, Computer Science student at IIT Gandhinagar, interested in AI, ML, and database systems." />
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ===================== NAVBAR ===================== -->
-  <header class="navbar" id="navbar" role="banner">
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar" role="banner">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo" aria-label="Home">
-        <span class="logo-text">ananya</span><span class="logo-accent">/&gt;</span>
+      <a href="#hero" class="logo" aria-label="Home">
+        <span class="logo-bracket">&lt;</span><span class="logo-name">ananya</span><span class="logo-bracket">/&gt;</span>
       </a>
+
       <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation" aria-expanded="false">
         <i data-lucide="menu"></i>
       </button>
-      <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#education">Education</a>
         <a href="#skills">Skills</a>
         <a href="#achievements">Achievements</a>
-        <a href="#experience">Research &amp; Experience</a>
+        <a href="#experience">Research & Experience</a>
         <a href="#projects">Projects</a>
         <a href="#leadership">Leadership</a>
         <a href="#contact">Contact</a>
       </nav>
+
       <div class="nav-actions">
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-          <i data-lucide="moon" id="themeIcon"></i>
+          <i data-lucide="moon" class="icon-moon"></i>
+          <i data-lucide="sun" class="icon-sun"></i>
         </button>
-        <a href="#" class="btn-resume" aria-label="Download Resume">
-          <i data-lucide="download" style="width:14px;height:14px;"></i>
-          Resume
+        <a href="https://drive.google.com/file/d/1lAJvL5CLQmCf3wfsIPYS6iQbAIkqik5M/view?usp=drivesdk" target="_blank" rel="noopener" class="btn-resume">
+          <i data-lucide="download"></i> Resume
         </a>
       </div>
     </div>
@@ -47,112 +54,98 @@
 
   <main>
 
-    <!-- ===================== HERO ===================== -->
-    <section id="hero" class="section hero-section">
+    <!-- ========== HERO ========== -->
+    <section id="hero" class="section-hero">
       <div class="hero-inner">
 
-        <!-- LEFT: Polaroid card -->
+        <!-- Left column: Polaroid card + socials -->
         <div class="hero-left fade-in">
-          <div class="polaroid-card">
-            <div class="polaroid-img-wrap">
-              <img src="images/profile.jpg" alt="Ananya Patel" class="polaroid-img" />
-            </div>
+          <div class="polaroid">
+            <img src="images/profile.jpg" alt="Ananya Patel" class="profile-img" />
             <div class="polaroid-caption">
-              <p class="polaroid-name">Ananya Patel</p>
-              <p class="polaroid-inst">IIT Gandhinagar</p>
+              <span class="polaroid-name">Ananya Patel</span>
+              <span class="polaroid-sub">IIT Gandhinagar</span>
             </div>
           </div>
-          <!-- Social icons -->
-          <div class="hero-socials" role="list">
-            <a href="https://www.linkedin.com/in/ananya-patel81/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn" role="listitem">
+
+          <div class="social-row" aria-label="Social links">
+            <a href="https://www.linkedin.com/in/ananya-patel81/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
               <i data-lucide="linkedin"></i>
             </a>
-            <a href="https://github.com/ananya-patel81" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub" role="listitem">
+            <a href="https://github.com/ananya-patel81" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
               <i data-lucide="github"></i>
             </a>
-            <a href="mailto:ananya.patel@iitgn.ac.in" class="social-icon" aria-label="Email" role="listitem">
+            <a href="mailto:ananya.patel@iitgn.ac.in" aria-label="Email" class="social-icon">
               <i data-lucide="mail"></i>
             </a>
-            <a href="#" class="social-icon" aria-label="Download Resume" role="listitem">
+            <a href="https://drive.google.com/file/d/1lAJvL5CLQmCf3wfsIPYS6iQbAIkqik5M/view?usp=drivesdk" target="_blank" rel="noopener" aria-label="Resume" class="social-icon">
               <i data-lucide="file-text"></i>
             </a>
           </div>
         </div>
 
-        <!-- RIGHT: Text content -->
-        <div class="hero-right fade-in" style="--delay: 0.1s">
+        <!-- Right column: intro text -->
+        <div class="hero-right fade-in fade-in-delay">
           <h1 class="hero-heading">Hello! I'm Ananya.</h1>
           <p class="hero-subheading">Computer Science Student &nbsp;|&nbsp; AI &amp; Systems Enthusiast</p>
+
           <p class="hero-bio">
             I'm a second-year Computer Science and Engineering student at IIT Gandhinagar with a growing interest in AI, systems, and research-driven problem solving. I enjoy exploring unfamiliar ideas, building things from scratch, and learning through experimentation. Over the years, moving across different parts of India taught me how to adapt quickly, embrace new environments, and connect with people from diverse backgrounds. Whether it's research, software development, or leading teams, I enjoy stepping outside my comfort zone and figuring things out along the way.
           </p>
+
           <p class="hero-funfact">
-            <span class="funfact-label">Fun fact —</span>
-            I have lived across multiple regions of India throughout my childhood, so adapting to new environments became a skill long before programming did.
+            <span class="funfact-label">Fun fact:</span> I have lived across multiple regions of India throughout my childhood, so adapting to new environments became a skill long before programming did.
           </p>
 
-          <!-- Currently card -->
           <div class="currently-card">
-            <p class="currently-label">Currently</p>
+            <span class="currently-label">Currently</span>
             <ul class="currently-list">
-              <li><i data-lucide="briefcase" class="currently-icon"></i> Summer Research Intern, IIT Hyderabad</li>
-              <li><i data-lucide="graduation-cap" class="currently-icon"></i> B.Tech CSE, IIT Gandhinagar</li>
-              <li><i data-lucide="cpu" class="currently-icon"></i> Minor in Artificial Intelligence</li>
+              <li><i data-lucide="flask-conical"></i> Summer Research Intern, IIT Hyderabad</li>
+              <li><i data-lucide="graduation-cap"></i> B.Tech CSE, IIT Gandhinagar</li>
+              <li><i data-lucide="brain"></i> Minor in Artificial Intelligence</li>
             </ul>
           </div>
 
           <p class="hero-exploring">
-            Currently exploring <strong>database systems</strong>, <strong>machine learning</strong>, <strong>retrieval-augmented generation</strong>, and <strong>probabilistic modeling</strong>.
+            Currently exploring <em>database systems, machine learning, retrieval-augmented generation,</em> and <em>probabilistic modeling.</em>
           </p>
         </div>
 
       </div>
     </section>
 
-    <!-- ===================== STATS ===================== -->
-    <section class="stats-section fade-in">
+    <!-- ========== STATS ========== -->
+    <section class="section-stats" aria-label="Quick stats">
       <div class="stats-inner">
-        <div class="stat-card">
-          <span class="stat-value">8.7<span class="stat-unit">/10</span></span>
+        <div class="stat-card fade-in">
+          <span class="stat-value">8.7<small>/10</small></span>
           <span class="stat-label">CPI</span>
         </div>
-        <div class="stat-card">
-          <span class="stat-value">7<span class="stat-unit">+</span></span>
+        <div class="stat-card fade-in">
+          <span class="stat-value">7<small>+</small></span>
           <span class="stat-label">Projects</span>
         </div>
-        <div class="stat-card">
+        <div class="stat-card fade-in">
           <span class="stat-value">1</span>
           <span class="stat-label">Research Internship</span>
         </div>
-        <div class="stat-card">
-          <span class="stat-value">270<span class="stat-unit">+</span></span>
+        <div class="stat-card fade-in">
+          <span class="stat-value">270<small>+</small></span>
           <span class="stat-label">DSA Problems</span>
         </div>
       </div>
     </section>
 
-    <!-- ===================== ABOUT / RESEARCH INTERESTS ===================== -->
-    <section id="about" class="section fade-in">
-      <div class="section-inner">
-        <h2 class="section-title">Research Interests</h2>
-        <div class="chips-row" role="list">
-          <span class="chip" role="listitem">Machine Learning</span>
-          <span class="chip" role="listitem">LLM Systems</span>
-          <span class="chip" role="listitem">Database Systems</span>
-          <span class="chip" role="listitem">Retrieval-Augmented Generation</span>
-          <span class="chip" role="listitem">Probabilistic Modeling</span>
-          <span class="chip" role="listitem">Multi-Agent Systems</span>
-          <span class="chip" role="listitem">AI for Education</span>
+    <!-- ========== EDUCATION ========== -->
+    <section id="education" class="section-padded">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-title">Education</h2>
+          <p class="section-sub">Academic background and qualifications</p>
         </div>
-      </div>
-    </section>
 
-    <!-- ===================== EDUCATION ===================== -->
-    <section id="education" class="section fade-in">
-      <div class="section-inner">
-        <h2 class="section-title">Education</h2>
-        <div class="edu-table-wrap">
-          <table class="edu-table" role="table">
+        <div class="edu-table-wrap fade-in">
+          <table class="edu-table" aria-label="Education history">
             <thead>
               <tr>
                 <th>Degree</th>
@@ -164,25 +157,25 @@
             </thead>
             <tbody>
               <tr>
-                <td><span class="edu-degree">B.Tech</span></td>
+                <td><span class="degree-badge">B.Tech</span></td>
                 <td>Computer Science and Engineering</td>
                 <td>IIT Gandhinagar</td>
                 <td>2024 – Present</td>
-                <td><span class="edu-score">CPI 8.7/10</span></td>
+                <td><strong>CPI 8.7/10</strong></td>
               </tr>
               <tr>
-                <td><span class="edu-degree">Class XII</span></td>
-                <td>Physics, Chemistry, Maths</td>
+                <td><span class="degree-badge">Class XII</span></td>
+                <td>Physics, Chemistry, Mathematics</td>
                 <td>Narayana Junior College, Vijayawada</td>
                 <td>2023 – 2024</td>
-                <td><span class="edu-score">97.2%</span></td>
+                <td><strong>97.2%</strong></td>
               </tr>
               <tr>
-                <td><span class="edu-degree">Class X</span></td>
+                <td><span class="degree-badge">Class X</span></td>
                 <td>CBSE</td>
                 <td>Delhi Public School, Vijayawada</td>
                 <td>2021 – 2022</td>
-                <td><span class="edu-score">98.5%</span></td>
+                <td><strong>98.5%</strong></td>
               </tr>
             </tbody>
           </table>
@@ -190,14 +183,37 @@
       </div>
     </section>
 
-    <!-- ===================== SKILLS ===================== -->
-    <section id="skills" class="section fade-in">
-      <div class="section-inner">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-grid">
-          <div class="skills-group">
-            <h3 class="skills-group-title">Programming</h3>
-            <div class="pills-row">
+    <!-- ========== RESEARCH INTERESTS ========== -->
+    <section class="section-interests section-padded">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-title">Research Interests</h2>
+          <p class="section-sub">Areas I think deeply about</p>
+        </div>
+        <div class="chips-wrap fade-in">
+          <span class="chip">Machine Learning</span>
+          <span class="chip">LLM Systems</span>
+          <span class="chip">Database Systems</span>
+          <span class="chip">Retrieval-Augmented Generation</span>
+          <span class="chip">Probabilistic Modeling</span>
+          <span class="chip">Multi-Agent Systems</span>
+          <span class="chip">AI for Education</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="section-padded section-alt">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-title">Skills</h2>
+          <p class="section-sub">Tools and technologies I work with</p>
+        </div>
+
+        <div class="skills-grid fade-in">
+          <div class="skill-group">
+            <h3 class="skill-group-title">Programming</h3>
+            <div class="skill-pills">
               <span class="pill">Python</span>
               <span class="pill">C++</span>
               <span class="pill">C</span>
@@ -205,9 +221,10 @@
               <span class="pill">Verilog</span>
             </div>
           </div>
-          <div class="skills-group">
-            <h3 class="skills-group-title">Frameworks &amp; Libraries</h3>
-            <div class="pills-row">
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">Frameworks &amp; Libraries</h3>
+            <div class="skill-pills">
               <span class="pill">PyTorch</span>
               <span class="pill">Scikit-learn</span>
               <span class="pill">Pandas</span>
@@ -216,76 +233,94 @@
               <span class="pill">C++ STL</span>
             </div>
           </div>
-          <div class="skills-group">
-            <h3 class="skills-group-title">Tools</h3>
-            <div class="pills-row">
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">Tools &amp; Platforms</h3>
+            <div class="skill-pills">
               <span class="pill">Docker</span>
               <span class="pill">Git</span>
               <span class="pill">GitHub</span>
               <span class="pill">VS Code</span>
               <span class="pill">Streamlit</span>
               <span class="pill">TrackIO</span>
-              <span class="pill">Xilinx Vivado</span>
+              <span class="pill">Vivado</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== ACHIEVEMENTS ===================== -->
-    <section id="achievements" class="section fade-in">
-      <div class="section-inner">
-        <h2 class="section-title">Achievements</h2>
-        <div class="achievements-layout">
-          <!-- Left: list -->
-          <ul class="achievements-list">
+    <!-- ========== ACHIEVEMENTS ========== -->
+    <section id="achievements" class="section-padded">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-title">Achievements</h2>
+          <p class="section-sub">Milestones and recognitions</p>
+        </div>
+
+        <div class="achievements-layout fade-in">
+          <!-- Left: achievement list -->
+          <ul class="achievement-list">
             <li class="achievement-item">
-              <span class="ach-dot"></span>
-              <span>Co-founded <strong>Candlesify</strong> — a luxury candle brand — at age 15, managing procurement, branding, and sales.</span>
+              <span class="achievement-icon"><i data-lucide="rocket"></i></span>
+              <div>
+                <strong>Co-founded Candlesify</strong> — Started a luxury candle brand at age 15, managing procurement, branding, and sales.
+              </div>
             </li>
             <li class="achievement-item">
-              <span class="ach-dot"></span>
-              <span>Awarded the <strong>Sri Tamasek Scholarship 2025-26</strong> for excellent academic performance and exemplary potential.</span>
+              <span class="achievement-icon"><i data-lucide="award"></i></span>
+              <div>
+                <strong>Sri Tamasek Scholarship 2025–26</strong> — Awarded for excellent academic performance and exemplary potential.
+              </div>
             </li>
             <li class="achievement-item">
-              <span class="ach-dot"></span>
-              <span>Achieved <strong>AIR 44</strong> in <strong>UGEE</strong> — the UG entrance exam for IIIT Hyderabad.</span>
+              <span class="achievement-icon"><i data-lucide="trophy"></i></span>
+              <div>
+                <strong>AIR 44 in UGEE</strong> — All-India Rank 44 in the UG entrance exam for IIIT Hyderabad.
+              </div>
             </li>
             <li class="achievement-item">
-              <span class="ach-dot"></span>
-              <span>
-                Earned <strong>Google AI Essentials</strong> certification.
+              <span class="achievement-icon"><i data-lucide="badge-check"></i></span>
+              <div>
+                <strong>Google AI Essentials Certification</strong> — Proficiency in AI concepts, workflow automation, and LLM tools.
                 <a href="https://drive.google.com/file/d/1u7wHqWgowskXzI-TC1pELoZD3OGtn5Ek/view?usp=sharing" target="_blank" rel="noopener" class="inline-link">View Certificate ↗</a>
-              </span>
+              </div>
             </li>
             <li class="achievement-item">
-              <span class="ach-dot"></span>
-              <span>Selected as a <strong>Google Student Ambassador</strong> — representing campus leadership and technical awareness.</span>
+              <span class="achievement-icon"><i data-lucide="star"></i></span>
+              <div>
+                <strong>Google Student Ambassador</strong> — Selected for the prestigious role representing campus leadership (declined due to concurrent research internship).
+              </div>
             </li>
             <li class="achievement-item">
-              <span class="ach-dot"></span>
-              <span>
-                Completed certified <strong>Data Science with Python</strong> at <strong>Finlatics</strong>.
+              <span class="achievement-icon"><i data-lucide="database"></i></span>
+              <div>
+                <strong>Finlatics Data Science Certification</strong> — Certified Data Science with Python program for hands-on industry projects.
                 <a href="https://drive.google.com/file/d/1lAJvL5CLQmCf3wfsIPYS6iQbAIkqik5M/view?usp=drivesdk" target="_blank" rel="noopener" class="inline-link">Certificate ↗</a>
+                &nbsp;·&nbsp;
                 <a href="https://drive.google.com/file/d/1h3ikQmeciOm-UCQENLPtsoUxx681UVfM/view?usp=drivesdk" target="_blank" rel="noopener" class="inline-link">LOR ↗</a>
-              </span>
+              </div>
             </li>
             <li class="achievement-item">
-              <span class="ach-dot"></span>
-              <span><strong>Certified Teaching Assistant</strong> — qualified to assist faculty in curriculum delivery and mentor peers.</span>
+              <span class="achievement-icon"><i data-lucide="book-open"></i></span>
+              <div>
+                <strong>Certified Teaching Assistant</strong> — Qualified to assist faculty in curriculum delivery and mentor peers in academic coursework.
+              </div>
             </li>
             <li class="achievement-item">
-              <span class="ach-dot"></span>
-              <span>Solved <strong>270+ DSA problems</strong> across LeetCode and GeeksforGeeks with consistent ongoing practice.</span>
+              <span class="achievement-icon"><i data-lucide="code-2"></i></span>
+              <div>
+                <strong>270+ DSA Problems Solved</strong> — Consistent practice on LeetCode and GeeksforGeeks to deepen algorithmic proficiency.
+              </div>
             </li>
           </ul>
 
-          <!-- Right: carousel -->
-          <div class="ach-carousel" role="region" aria-label="Achievement images">
+          <!-- Right: image carousel -->
+          <div class="carousel" aria-label="Achievement photos">
             <div class="carousel-track" id="carouselTrack">
-              <img src="images/achievement1.jpg" alt="Achievement 1" class="carousel-img" />
-              <img src="images/achievement2.jpg" alt="Achievement 2" class="carousel-img" />
-              <img src="images/achievement3.jpg" alt="Achievement 3" class="carousel-img" />
+              <div class="carousel-slide"><img src="images/achievement1.jpg" alt="Achievement 1" /></div>
+              <div class="carousel-slide"><img src="images/achievement2.jpg" alt="Achievement 2" /></div>
+              <div class="carousel-slide"><img src="images/achievement3.jpg" alt="Achievement 3" /></div>
             </div>
             <div class="carousel-controls">
               <button class="carousel-btn" id="carouselPrev" aria-label="Previous image">
@@ -301,109 +336,117 @@
       </div>
     </section>
 
-    <!-- ===================== RESEARCH & EXPERIENCE ===================== -->
-    <section id="experience" class="section fade-in">
-      <div class="section-inner">
-        <h2 class="section-title">Research &amp; Experience</h2>
-        <div class="timeline">
+    <!-- ========== RESEARCH & EXPERIENCE ========== -->
+    <section id="experience" class="section-padded section-alt">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-title">Research &amp; Experience</h2>
+          <p class="section-sub">Where I've applied and grown my skills</p>
+        </div>
 
+        <div class="timeline fade-in">
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <div class="timeline-header">
                 <div>
                   <h3 class="timeline-role">Summer Research Intern</h3>
-                  <p class="timeline-org">IIT Hyderabad</p>
-                  <p class="timeline-meta">Advisor: Prof. Anupam Sanghi &nbsp;|&nbsp; May 2026 – Present</p>
+                  <span class="timeline-org">IIT Hyderabad</span>
                 </div>
-                <button class="expand-btn" aria-expanded="false" aria-controls="exp-details-1">
-                  <i data-lucide="chevron-down"></i>
-                </button>
+                <span class="timeline-date">May 2026 – Present</span>
               </div>
-              <div class="timeline-details" id="exp-details-1" hidden>
-                <ul class="timeline-bullets">
-                  <li>Investigating and validating a hypothesis that optimizer plan-switch boundaries can effectively characterize worst-case query execution error (Q-error), by analyzing plan transitions across multi-dimensional selectivity spaces and evaluating their impact on database performance, reducing computation involved in usual methods.</li>
+              <p class="timeline-advisor">Advisor: <strong>Prof. Anupam Sanghi</strong>, IIT Hyderabad</p>
+
+              <button class="expand-btn" aria-expanded="false" aria-controls="exp-details-1">
+                View Responsibilities <i data-lucide="chevron-down"></i>
+              </button>
+              <div class="expand-content" id="exp-details-1" hidden>
+                <ul class="exp-list">
+                  <li>Investigating and validating a hypothesis that optimizer plan-switch boundaries can effectively characterize worst-case query execution error (Q-error), by analyzing plan transitions across multi-dimensional selectivity spaces and evaluating their impact on database performance — reducing the computation involved in usual methods.</li>
                   <li>Designing and implementing graph-based exploration algorithms to identify representative high-error regions, enabling efficient performance characterization without exhaustive search-space exploration.</li>
                 </ul>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ===================== PROJECTS ===================== -->
-    <section id="projects" class="section fade-in">
-      <div class="section-inner">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-scroll-wrap">
-          <div class="projects-scroll" role="list">
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="section-padded">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-title">Projects</h2>
+          <p class="section-sub">Things I've built and researched</p>
+        </div>
 
-            <!-- 1 -->
-            <article class="project-card" role="listitem">
+        <div class="projects-scroll-wrap fade-in">
+          <div class="projects-scroll" id="projectsScroll">
+
+            <!-- Project 1 -->
+            <article class="project-card" data-project="0">
               <div class="project-card-top">
                 <span class="project-type">Independent</span>
                 <h3 class="project-title">Enterprise Knowledge Assistant</h3>
+                <p class="project-blurb">AI-powered RAG system with semantic search over enterprise knowledge repositories.</p>
               </div>
               <div class="project-tags">
                 <span class="tag">Python</span>
                 <span class="tag">RAG</span>
                 <span class="tag">FAISS</span>
-                <span class="tag">Embeddings</span>
+                <span class="tag">LLM</span>
               </div>
-              <div class="project-card-actions">
-                <a href="https://github.com/ananya-patel81/enterprise-knowledge-assistant" target="_blank" rel="noopener" class="btn-sm">
-                  <i data-lucide="external-link" style="width:13px;height:13px;"></i> Link
-                </a>
-                <button class="btn-sm btn-details" data-project="0">View Details</button>
+              <div class="project-actions">
+                <a href="https://github.com/ananya-patel81/enterprise-knowledge-assistant" target="_blank" rel="noopener" class="btn-proj-link"><i data-lucide="external-link"></i> GitHub</a>
+                <button class="btn-proj-detail" data-project="0">View Details</button>
               </div>
             </article>
 
-            <!-- 2 -->
-            <article class="project-card" role="listitem">
+            <!-- Project 2 -->
+            <article class="project-card" data-project="1">
               <div class="project-card-top">
                 <span class="project-type">Research</span>
                 <h3 class="project-title">Game Theory &amp; Probability Research</h3>
+                <p class="project-blurb">Probabilistic strategy modeling for the dice game Farkle using game-theoretic frameworks.</p>
               </div>
               <div class="project-tags">
-                <span class="tag">Game Theory</span>
-                <span class="tag">Probabilistic Simulation</span>
                 <span class="tag">Python</span>
+                <span class="tag">Game Theory</span>
+                <span class="tag">Probability</span>
+                <span class="tag">RL-inspired</span>
               </div>
-              <div class="project-card-actions">
-                <a href="https://ccl.iitgn.ac.in/" target="_blank" rel="noopener" class="btn-sm">
-                  <i data-lucide="external-link" style="width:13px;height:13px;"></i> CCL
-                </a>
-                <button class="btn-sm btn-details" data-project="1">View Details</button>
+              <div class="project-actions">
+                <a href="https://ccl.iitgn.ac.in/" target="_blank" rel="noopener" class="btn-proj-link"><i data-lucide="external-link"></i> CCL, IITGN</a>
+                <button class="btn-proj-detail" data-project="1">View Details</button>
               </div>
             </article>
 
-            <!-- 3 -->
-            <article class="project-card" role="listitem">
+            <!-- Project 3 -->
+            <article class="project-card" data-project="2">
               <div class="project-card-top">
                 <span class="project-type">Course</span>
                 <h3 class="project-title">Smart Rent Prediction System</h3>
+                <p class="project-blurb">Optimized Random Forest pipeline with Bayesian HPO and Dockerized Streamlit deployment.</p>
               </div>
               <div class="project-tags">
-                <span class="tag">Random Forest</span>
+                <span class="tag">Python</span>
+                <span class="tag">Scikit-learn</span>
                 <span class="tag">Optuna</span>
                 <span class="tag">Docker</span>
                 <span class="tag">Streamlit</span>
               </div>
-              <div class="project-card-actions">
-                <a href="https://github.com/ananya-patel81/sttai-assignment4-submission" target="_blank" rel="noopener" class="btn-sm">
-                  <i data-lucide="external-link" style="width:13px;height:13px;"></i> Link
-                </a>
-                <button class="btn-sm btn-details" data-project="2">View Details</button>
+              <div class="project-actions">
+                <a href="https://github.com/ananya-patel81/sttai-assignment4-submission" target="_blank" rel="noopener" class="btn-proj-link"><i data-lucide="external-link"></i> GitHub</a>
+                <button class="btn-proj-detail" data-project="2">View Details</button>
               </div>
             </article>
 
-            <!-- 4 -->
-            <article class="project-card" role="listitem">
+            <!-- Project 4 -->
+            <article class="project-card" data-project="3">
               <div class="project-card-top">
                 <span class="project-type">Course</span>
-                <h3 class="project-title">Smart Game Engines (C++)</h3>
+                <h3 class="project-title">Smart Game Engines using C++</h3>
+                <p class="project-blurb">Terminal-based AI game engines for Connect4, Sudoku, and Tic-Tac-Toe with MiniMax + α-β pruning.</p>
               </div>
               <div class="project-tags">
                 <span class="tag">C++</span>
@@ -411,38 +454,37 @@
                 <span class="tag">MiniMax</span>
                 <span class="tag">Alpha-Beta</span>
               </div>
-              <div class="project-card-actions">
-                <a href="https://github.com/ananya-patel81/Smart-game-engine/tree/main" target="_blank" rel="noopener" class="btn-sm">
-                  <i data-lucide="external-link" style="width:13px;height:13px;"></i> Link
-                </a>
-                <button class="btn-sm btn-details" data-project="3">View Details</button>
+              <div class="project-actions">
+                <a href="https://github.com/ananya-patel81/Smart-game-engine/tree/main" target="_blank" rel="noopener" class="btn-proj-link"><i data-lucide="external-link"></i> GitHub</a>
+                <button class="btn-proj-detail" data-project="3">View Details</button>
               </div>
             </article>
 
-            <!-- 5 -->
-            <article class="project-card" role="listitem">
+            <!-- Project 5 -->
+            <article class="project-card" data-project="4">
               <div class="project-card-top">
                 <span class="project-type">Independent</span>
                 <h3 class="project-title">OpenCV Virtual Mouse</h3>
+                <p class="project-blurb">Hands-free computer interface translating hand gestures into real-time cursor actions at 30 FPS.</p>
               </div>
               <div class="project-tags">
                 <span class="tag">Python</span>
                 <span class="tag">OpenCV</span>
                 <span class="tag">MediaPipe</span>
+                <span class="tag">Computer Vision</span>
               </div>
-              <div class="project-card-actions">
-                <a href="https://github.com/ananya-patel81/ai_virtual_mouse" target="_blank" rel="noopener" class="btn-sm">
-                  <i data-lucide="external-link" style="width:13px;height:13px;"></i> Link
-                </a>
-                <button class="btn-sm btn-details" data-project="4">View Details</button>
+              <div class="project-actions">
+                <a href="https://github.com/ananya-patel81/ai_virtual_mouse" target="_blank" rel="noopener" class="btn-proj-link"><i data-lucide="external-link"></i> GitHub</a>
+                <button class="btn-proj-detail" data-project="4">View Details</button>
               </div>
             </article>
 
-            <!-- 6 -->
-            <article class="project-card" role="listitem">
+            <!-- Project 6 -->
+            <article class="project-card" data-project="5">
               <div class="project-card-top">
-                <span class="project-type">Industry</span>
+                <span class="project-type">Independent</span>
                 <h3 class="project-title">Business Data Analytics</h3>
+                <p class="project-blurb">EDA and insights on 45K+ banking records to study term deposit subscription factors.</p>
               </div>
               <div class="project-tags">
                 <span class="tag">Python</span>
@@ -450,75 +492,82 @@
                 <span class="tag">Matplotlib</span>
                 <span class="tag">EDA</span>
               </div>
-              <div class="project-card-actions">
-                <a href="https://github.com/ananya-patel81/Business-Data-Analytics-Project-Finlatics" target="_blank" rel="noopener" class="btn-sm">
-                  <i data-lucide="external-link" style="width:13px;height:13px;"></i> Link
-                </a>
-                <button class="btn-sm btn-details" data-project="5">View Details</button>
+              <div class="project-actions">
+                <a href="https://github.com/ananya-patel81/Business-Data-Analytics-Project-Finlatics" target="_blank" rel="noopener" class="btn-proj-link"><i data-lucide="external-link"></i> GitHub</a>
+                <button class="btn-proj-detail" data-project="5">View Details</button>
               </div>
             </article>
 
-            <!-- 7 -->
-            <article class="project-card" role="listitem">
+            <!-- Project 7 -->
+            <article class="project-card" data-project="6">
               <div class="project-card-top">
                 <span class="project-type">Course</span>
-                <h3 class="project-title">Arduino Dual-Axis Solar Tracker</h3>
+                <h3 class="project-title">Dual-Axis Solar Tracker</h3>
+                <p class="project-blurb">Arduino-based system with LDR sensors for dynamic solar panel orientation optimization.</p>
               </div>
               <div class="project-tags">
                 <span class="tag">Arduino</span>
                 <span class="tag">C</span>
+                <span class="tag">Embedded</span>
                 <span class="tag">LDR Sensors</span>
-                <span class="tag">Hardware</span>
               </div>
-              <div class="project-card-actions">
-                <a href="https://github.com/ananya-patel81/Dual-Axis-Solar-Tracker-Arduino" target="_blank" rel="noopener" class="btn-sm">
-                  <i data-lucide="external-link" style="width:13px;height:13px;"></i> Link
-                </a>
-                <button class="btn-sm btn-details" data-project="6">View Details</button>
+              <div class="project-actions">
+                <a href="https://github.com/ananya-patel81/Dual-Axis-Solar-Tracker-Arduino" target="_blank" rel="noopener" class="btn-proj-link"><i data-lucide="external-link"></i> GitHub</a>
+                <button class="btn-proj-detail" data-project="6">View Details</button>
               </div>
             </article>
 
           </div>
+          <!-- scroll arrows -->
+          <button class="scroll-arrow scroll-left" id="scrollLeft" aria-label="Scroll left"><i data-lucide="chevron-left"></i></button>
+          <button class="scroll-arrow scroll-right" id="scrollRight" aria-label="Scroll right"><i data-lucide="chevron-right"></i></button>
         </div>
       </div>
     </section>
 
-    <!-- ===================== LEADERSHIP ===================== -->
-    <section id="leadership" class="section fade-in">
-      <div class="section-inner">
-        <h2 class="section-title">Leadership &amp; Community</h2>
-        <div class="leadership-grid">
+    <!-- ========== LEADERSHIP ========== -->
+    <section id="leadership" class="section-padded section-alt">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-title">Leadership &amp; Community</h2>
+          <p class="section-sub">Roles where I've led, mentored, and built together</p>
+        </div>
 
-          <article class="leadership-card" role="button" tabindex="0" data-leader="0" aria-label="Blithchron PR Coordinator details">
+        <div class="leadership-grid fade-in">
+
+          <article class="leadership-card" data-leadership="0">
             <div class="leadership-img-wrap">
-              <img src="images/blithchron.jpg" alt="Blithchron" class="leadership-img" />
+              <img src="images/blithchron.jpg" alt="Blithchron PR Coordinator" class="leadership-img" />
             </div>
             <div class="leadership-info">
               <h3 class="leadership-title">Blithchron PR Coordinator</h3>
-              <p class="leadership-duration">May 2025 – March 2026</p>
-              <p class="leadership-summary">Led 70+ students for IIT Gandhinagar's largest cultural fest, driving 2x marathon participation to 3,000+ runners.</p>
+              <span class="leadership-duration">May 2025 – March 2026</span>
+              <p class="leadership-summary">Led a 70+ member team to drive 2x marathon participation growth at Gujarat's largest student-run cultural festival.</p>
+              <button class="btn-leadership-detail" data-leadership="0">Read More</button>
             </div>
           </article>
 
-          <article class="leadership-card" role="button" tabindex="0" data-leader="1" aria-label="Student Guide details">
+          <article class="leadership-card" data-leadership="1">
             <div class="leadership-img-wrap">
               <img src="images/studentguide.jpg" alt="Student Guide" class="leadership-img" />
             </div>
             <div class="leadership-info">
               <h3 class="leadership-title">Student Guide</h3>
-              <p class="leadership-duration">May 2026 – Present</p>
-              <p class="leadership-summary">Faculty-led initiative providing holistic support and mentorship to first-year students across academic and non-academic domains.</p>
+              <span class="leadership-duration">May 2026 – Present</span>
+              <p class="leadership-summary">Mentoring first-year students on coursework, campus life, and emotional well-being in a faculty-led initiative.</p>
+              <button class="btn-leadership-detail" data-leadership="1">Read More</button>
             </div>
           </article>
 
-          <article class="leadership-card" role="button" tabindex="0" data-leader="2" aria-label="Course Mentor details">
+          <article class="leadership-card" data-leadership="2">
             <div class="leadership-img-wrap">
               <img src="images/mentor.jpg" alt="Course Mentor" class="leadership-img" />
             </div>
             <div class="leadership-info">
               <h3 class="leadership-title">Course Mentor</h3>
-              <p class="leadership-duration">Aug 2025 – Nov 2025</p>
-              <p class="leadership-summary">Mentored 60+ undergrads in Product Design &amp; Prototyping — covering design thinking, prototyping, and procurement workflows.</p>
+              <span class="leadership-duration">Aug 2025 – Nov 2025</span>
+              <p class="leadership-summary">Mentored 60+ students on product design, prototyping, and design thinking under faculty supervision.</p>
+              <button class="btn-leadership-detail" data-leadership="2">Read More</button>
             </div>
           </article>
 
@@ -526,49 +575,49 @@
       </div>
     </section>
 
-    <!-- ===================== CONTACT ===================== -->
-    <section id="contact" class="section fade-in">
-      <div class="section-inner contact-inner">
-        <h2 class="contact-heading">Let's build, research,<br>and learn together.</h2>
-        <p class="contact-sub">I'm open to research collaborations, internship opportunities, and interesting conversations.</p>
-        <div class="contact-actions">
-          <a href="https://www.linkedin.com/in/ananya-patel81/" target="_blank" rel="noopener" class="contact-btn">
-            <i data-lucide="linkedin"></i> LinkedIn
-          </a>
-          <a href="https://github.com/ananya-patel81" target="_blank" rel="noopener" class="contact-btn">
-            <i data-lucide="github"></i> GitHub
-          </a>
-          <a href="mailto:ananya.patel@iitgn.ac.in" class="contact-btn contact-btn-accent">
-            <i data-lucide="mail"></i> ananya.patel@iitgn.ac.in
-          </a>
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section-padded">
+      <div class="container">
+        <div class="contact-inner fade-in">
+          <h2 class="contact-heading">Let's build, research, and learn together.</h2>
+          <p class="contact-sub">I'm always open to interesting conversations, research opportunities, and collaborative projects.</p>
+
+          <div class="contact-actions">
+            <a href="https://www.linkedin.com/in/ananya-patel81/" target="_blank" rel="noopener" class="btn-contact">
+              <i data-lucide="linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/ananya-patel81" target="_blank" rel="noopener" class="btn-contact">
+              <i data-lucide="github"></i> GitHub
+            </a>
+            <a href="mailto:ananya.patel@iitgn.ac.in" class="btn-contact btn-contact-accent">
+              <i data-lucide="mail"></i> ananya.patel@iitgn.ac.in
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ===================== FOOTER ===================== -->
   <footer class="site-footer">
-    <p>Designed &amp; built by Ananya Patel &nbsp;·&nbsp; IIT Gandhinagar</p>
+    <div class="container">
+      <p>Designed &amp; built by Ananya Patel · 2025</p>
+    </div>
   </footer>
 
-  <!-- ===================== PROJECT MODAL ===================== -->
+  <!-- ========== PROJECT MODAL ========== -->
   <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
     <div class="modal-box">
-      <button class="modal-close" id="modalClose" aria-label="Close modal">
-        <i data-lucide="x"></i>
-      </button>
-      <div class="modal-content" id="modalContent"></div>
+      <button class="modal-close" id="modalClose" aria-label="Close modal"><i data-lucide="x"></i></button>
+      <div class="modal-body" id="modalBody"></div>
     </div>
   </div>
 
-  <!-- ===================== LEADERSHIP MODAL ===================== -->
-  <div class="modal-overlay" id="leaderModal" role="dialog" aria-modal="true" aria-labelledby="leaderModalTitle" hidden>
+  <!-- ========== LEADERSHIP MODAL ========== -->
+  <div class="modal-overlay" id="leadershipModal" role="dialog" aria-modal="true" aria-labelledby="leaderModalTitle" hidden>
     <div class="modal-box">
-      <button class="modal-close" id="leaderModalClose" aria-label="Close modal">
-        <i data-lucide="x"></i>
-      </button>
-      <div class="modal-content" id="leaderModalContent"></div>
+      <button class="modal-close" id="leaderModalClose" aria-label="Close modal"><i data-lucide="x"></i></button>
+      <div class="modal-body" id="leaderModalBody"></div>
     </div>
   </div>
 
