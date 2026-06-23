@@ -25,19 +25,7 @@
   --transition: 0.2s ease;
 }
 
-[data-theme="dark"] {
-  --bg: #111111;
-  --bg-alt: #1A1A1A;
-  --bg-card: #1E1E1E;
-  --text-primary: #EEEEEE;
-  --text-secondary: #999999;
-  --accent: #E91E8C;
-  --accent-soft: #2A0F1A;
-  --border: #2A2A2A;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
-  --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
-  --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
-}
+/* Dark mode removed — light only */
 
 /* ---------- Reset & Base ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -196,25 +184,7 @@ button {
   flex-shrink: 0;
 }
 
-.theme-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: var(--radius-sm);
-  color: var(--text-secondary);
-  transition: background var(--transition), color var(--transition);
-}
-
-.theme-toggle:hover {
-  background: var(--bg-alt);
-  color: var(--text-primary);
-}
-
-.icon-sun { display: none; }
-[data-theme="dark"] .icon-moon { display: none; }
-[data-theme="dark"] .icon-sun { display: block; }
+/* theme toggle removed */
 
 .btn-resume {
   display: inline-flex;
@@ -549,24 +519,30 @@ button {
   gap: 10px;
 }
 
+/* Warm multi-colour chips — cycles through 7 warm tones */
 .chip {
   display: inline-block;
-  padding: 7px 14px;
-  border: 1.5px solid var(--border);
+  padding: 7px 16px;
   border-radius: 100px;
   font-size: 0.83rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  background: var(--bg-card);
-  transition: border-color var(--transition), color var(--transition), background var(--transition);
+  font-weight: 600;
+  border: 1.5px solid transparent;
   cursor: default;
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .chip:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: var(--accent-soft);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
+
+.chip:nth-child(7n+1) { background: #FFF3E0; color: #E65100; border-color: #FFCC80; }
+.chip:nth-child(7n+2) { background: #FCE4EC; color: #C2185B; border-color: #F48FB1; }
+.chip:nth-child(7n+3) { background: #FFF8E1; color: #F57F17; border-color: #FFE082; }
+.chip:nth-child(7n+4) { background: #F3E5F5; color: #7B1FA2; border-color: #CE93D8; }
+.chip:nth-child(7n+5) { background: #E8F5E9; color: #2E7D32; border-color: #A5D6A7; }
+.chip:nth-child(7n+6) { background: #E3F2FD; color: #1565C0; border-color: #90CAF9; }
+.chip:nth-child(7n+0) { background: #FBE9E7; color: #BF360C; border-color: #FFAB91; }
 
 /* ---------- SKILLS ---------- */
 .skills-grid {
@@ -600,27 +576,33 @@ button {
 
 .pill {
   display: inline-block;
-  padding: 5px 12px;
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
+  padding: 5px 13px;
   border-radius: var(--radius-sm);
   font-size: 0.82rem;
-  font-weight: 500;
-  color: var(--text-primary);
-  transition: background var(--transition), border-color var(--transition), color var(--transition);
+  font-weight: 600;
+  border: 1.5px solid transparent;
   cursor: default;
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .pill:hover {
-  background: var(--accent-soft);
-  border-color: var(--accent);
-  color: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
 }
+
+/* Programming group — warm amber/orange */
+.skill-group:nth-child(1) .pill { background: #FFF3E0; color: #E65100; border-color: #FFCC80; }
+
+/* Frameworks group — warm rose/pink */
+.skill-group:nth-child(2) .pill { background: #FCE4EC; color: #C2185B; border-color: #F48FB1; }
+
+/* Tools group — warm purple/indigo */
+.skill-group:nth-child(3) .pill { background: #F3E5F5; color: #6A1B9A; border-color: #CE93D8; }
 
 /* ---------- ACHIEVEMENTS ---------- */
 .achievements-layout {
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr 380px;
   gap: 40px;
   align-items: start;
 }
@@ -693,7 +675,7 @@ button {
 
 .carousel-slide img {
   width: 100%;
-  height: 230px;
+  height: 340px;
   object-fit: cover;
   background: var(--bg-alt);
   /* Placeholder */

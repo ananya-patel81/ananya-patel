@@ -1,8 +1,8 @@
 /* =====================================================
    ANANYA PATEL PORTFOLIO — script.js
-   Handles: dark mode, nav, scroll animations,
-   carousel, expand/collapse, project modals,
-   leadership modals, scroll arrows
+   Handles: nav, scroll animations, carousel,
+   expand/collapse, project modals, leadership modals,
+   scroll arrows. Light theme only.
    ===================================================== */
 
 /* ──────────────────────────────────────────
@@ -11,7 +11,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   if (typeof lucide !== 'undefined') lucide.createIcons();
 
-  initTheme();
   initNav();
   initScrollAnimations();
   initCarousel();
@@ -21,29 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollArrows();
   initActiveNavLinks();
 });
-
-/* ──────────────────────────────────────────
-   2. DARK / LIGHT MODE
-   ────────────────────────────────────────── */
-function initTheme() {
-  const toggle = document.getElementById('themeToggle');
-  const root   = document.documentElement;
-
-  // Restore saved preference, or respect OS preference
-  const saved = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const initial = saved || (prefersDark ? 'dark' : 'light');
-  root.setAttribute('data-theme', initial);
-
-  toggle.addEventListener('click', () => {
-    const current = root.getAttribute('data-theme');
-    const next    = current === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-    // Re-init icons after theme swap (some browsers need this)
-    if (typeof lucide !== 'undefined') lucide.createIcons();
-  });
-}
 
 /* ──────────────────────────────────────────
    3. NAVIGATION — hamburger toggle
